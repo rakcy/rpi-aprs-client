@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>APRS Web Client</title>
+	</head>
+	<body>
+		Hello! You can send an APRS message here</br>
+		The sent message will be in this format:</br>
+		YYYY-MM-DDTHH:MM:SS-[your message here]</br>
+		</br>
+		Example: sending "Hello World" will send this message:</br>
+		2018-06-11T13:30:00-Hello World</br>
+		</br>
+		<strong>Note: The maximum input size is 236</strong></br>
+		</br>
+		<form action='/' method='GET'>
+			Message: <input name='message' type='text' maxlength="236"></input>
+			<input type='submit' value="Send Message"></input>
+			{% if message_sent %}
+				</br>
+				<strong>The message has been sent!</strong>
+			{% endif %}
+		</form>
+		</br>
+		<strong>Received Messages</strong>
+		</br>
+		<textarea disabled=True cols="80" rows="30">{{ received_packets }}</textarea>
+
+	</body>
+</html>
