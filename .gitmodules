@@ -1,0 +1,7 @@
+[submodule "aprs_web_client/afsk"]
+	path = aprs_web_client/afsk
+	url = https://github.com/casebeer/afsk
+
+[submodule "aprs_web_client/fm_transmitter"]
+	path = aprs_web_client/fm_transmitter
+	url = https://github.com/markondej/fm_transmitter
